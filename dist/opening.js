@@ -37,8 +37,8 @@ function finishOpening({ remember = true, focus = true } = {}) {
 function measurePortal() {
   const bounds = canvas.getBoundingClientRect();
   const letter = portal.getBoundingClientRect();
-  const x = letter.left - bounds.left + letter.width * .51;
-  const y = letter.top - bounds.top + letter.height * .49;
+  const x = letter.left - bounds.left + letter.width * .5;
+  const y = letter.top - bounds.top + letter.height * .51;
   canvas.setAttribute('viewBox', '0 0 ' + bounds.width + ' ' + bounds.height);
   mask.setAttribute('width', bounds.width);
   mask.setAttribute('height', bounds.height);
@@ -48,9 +48,9 @@ function measurePortal() {
   }
   geometry = {
     x, y,
-    innerX: letter.width * .255,
-    innerY: letter.height * .245,
-    stroke: letter.width * .15,
+    innerX: letter.width * .28,
+    innerY: letter.height * .26,
+    stroke: letter.width * .18,
     radius: Math.hypot(Math.max(x, bounds.width - x), Math.max(y, bounds.height - y)) + 32
   };
 }

@@ -11,11 +11,11 @@ html.intro-revealing .notebook{transform:scale(1);transition:transform 1150ms cu
 .opening-top{top:clamp(24px,4vw,48px);color:#435a7c}
 .opening-top .micro{font-size:9px;letter-spacing:1.9px}
 .opening-top>span:last-child{color:var(--blue)}
-.opening-name{position:absolute;top:47%;left:50%;transform:translate(-50%,-50%);font-family:var(--sans);font-size:clamp(74px,15.6vw,210px);font-weight:700;line-height:.84;letter-spacing:-.085em;white-space:nowrap;transition:opacity 220ms ease;z-index:1}
+.opening-name{position:absolute;top:47%;left:50%;transform:translate(-50%,-50%);font-family:var(--sans);font-size:clamp(74px,15.6vw,210px);font-weight:700;line-height:.84;--opening-tracking:-.085em;letter-spacing:var(--opening-tracking);white-space:nowrap;transition:opacity 220ms ease;z-index:1}
 .opening-word{display:block;width:max-content;overflow:hidden;padding:0 .06em .11em 0}
 .opening-surname{margin-top:-.025em}
 .opening-letter{display:inline-block;opacity:0;transform:translateY(115%) rotate(3deg);transform-origin:50% 100%}
-.opening-portal{color:var(--blue)}
+.opening-portal{color:var(--blue);letter-spacing:0;margin-right:var(--opening-tracking)}
 .opening-name-period{color:var(--blue);font-size:.44em;display:inline-block;margin-left:.04em;opacity:0;transform:scale(.3)}
 .is-writing .opening-letter{animation:opening-letter-in 850ms cubic-bezier(.16,1,.3,1) calc(120ms + var(--letter)*28ms) both}
 .is-writing .opening-name-period{animation:opening-period-in 650ms cubic-bezier(.16,1,.3,1) 650ms both}
@@ -30,6 +30,7 @@ html.intro-revealing .notebook{transform:scale(1);transition:transform 1150ms cu
 .opening-skip:hover{color:var(--blue)}
 .opening-skip:focus-visible{outline:2px solid var(--blue);outline-offset:7px;border-radius:2px}
 .opening-skip>span{font-size:15px;color:var(--blue)}
+.is-revealing .opening-portal{visibility:hidden}
 .is-revealing .opening-name,.is-revealing .opening-chrome,.is-revealing .opening-rule{opacity:0;pointer-events:none}
 .opening-replay{font:inherit;color:inherit;padding:0;text-underline-offset:4px;white-space:nowrap}
 .opening-replay:hover{color:#fff;text-decoration:underline}
@@ -40,7 +41,7 @@ html.intro-revealing .notebook{transform:scale(1);transition:transform 1150ms cu
 @keyframes opening-line-in{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes opening-caption-in{from{opacity:0;translate:0 5px}to{opacity:1;translate:0 0}}
 @media(max-width:600px){
-  .opening-name{top:46%;font-size:clamp(67px,19.5vw,116px);letter-spacing:-.075em}
+  .opening-name{top:46%;font-size:clamp(67px,19.5vw,116px);--opening-tracking:-.075em;letter-spacing:var(--opening-tracking)}
   .opening-top{align-items:flex-start;gap:18px}
   .opening-top .micro{font-size:7px;letter-spacing:1.2px}
   .opening-top>span:last-child{max-width:80px;text-align:right}
