@@ -9,12 +9,55 @@
   <meta property="og:description" content="Product design, practical thinking, and the work behind the screens.">
   <meta property="og:type" content="website">
   <title>George Okochar — Working Notes</title>
+  <script>
+    (() => {
+      try {
+        let seen = false;
+        try { seen = sessionStorage.getItem('george-notebook-opening-v1') === 'seen'; } catch {}
+        const home = !location.hash || location.hash === '#work';
+        const replay = new URLSearchParams(location.search).has('opening');
+        if (!home || matchMedia('(prefers-reduced-motion: reduce)').matches || (seen && !replay)) return;
+        document.documentElement.classList.add('intro-active', 'intro-pending');
+        // The notebook always remains available if the enhancement cannot start.
+        setTimeout(() => {
+          const root = document.documentElement;
+          if (!root.classList.contains('intro-pending')) return;
+          const opening = document.getElementById('opening-screen');
+          if (opening?.open) opening.close();
+          root.classList.remove('intro-active', 'intro-pending', 'intro-revealing');
+        }, 6500);
+      } catch {}
+    })();
+  </script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="project-media.css">
+  <link rel="stylesheet" href="opening.css">
   <script type="module" src="app.js"></script>
+  <script type="module" src="opening.js"></script>
 </head>
 <body>
+  <dialog id="opening-screen" class="opening-screen" aria-labelledby="opening-label">
+    <h2 id="opening-label" class="sr-only">Opening George Okochar’s working notes</h2>
+    <svg class="opening-canvas" aria-hidden="true" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="opening-dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".65" fill="#aabedc" opacity=".34"/></pattern>
+        <mask id="opening-cutout" maskUnits="userSpaceOnUse" x="0" y="0" style="mask-type:luminance">
+          <rect width="100%" height="100%" fill="white"/>
+          <ellipse id="opening-hole" cx="0" cy="0" rx="0" ry="0" fill="black"/>
+        </mask>
+      </defs>
+      <g mask="url(#opening-cutout)"><rect width="100%" height="100%" fill="#f8f7f2"/><rect width="100%" height="100%" fill="url(#opening-dots)"/></g>
+      <ellipse id="opening-ring" cx="0" cy="0" rx="0" ry="0" fill="none" stroke="#0846d4" opacity="0"/>
+    </svg>
+    <div class="opening-top opening-chrome" aria-hidden="true"><span class="micro">Working notes / Vol. 01</span><span class="micro">Design, considered.</span></div>
+    <div class="opening-name" aria-hidden="true">
+      <span class="opening-word"><span class="opening-letter" style="--letter:0">G</span><span class="opening-letter" style="--letter:1">e</span><span class="opening-letter" style="--letter:2">o</span><span class="opening-letter" style="--letter:3">r</span><span class="opening-letter" style="--letter:4">g</span><span class="opening-letter" style="--letter:5">e</span><span class="opening-name-period">.</span></span>
+      <span class="opening-word opening-surname"><span class="opening-letter opening-portal" id="opening-portal" style="--letter:5">O</span><span class="opening-letter" style="--letter:6">k</span><span class="opening-letter" style="--letter:7">o</span><span class="opening-letter" style="--letter:8">c</span><span class="opening-letter" style="--letter:9">h</span><span class="opening-letter" style="--letter:10">a</span><span class="opening-letter" style="--letter:11">r</span></span>
+    </div>
+    <div class="opening-rule" aria-hidden="true"><span class="opening-rule-ink"></span><span class="opening-rule-label micro">A little curiosity goes a long way.</span></div>
+    <div class="opening-bottom opening-chrome"><span class="hand-note" aria-hidden="true">a few pages from my world.</span><button type="button" class="opening-skip" data-skip-opening>Skip opening <span aria-hidden="true">↗</span></button></div>
+  </dialog>
   <a class="skip-link" href="#main">Skip to the notebook</a>
   <div class="notebook">
     <header class="site-header">
@@ -32,7 +75,7 @@
       </nav>
     </header>
 
-    <main id="main">
+    <main id="main" tabindex="-1">
       <section id="panel-work" class="chapter" role="tabpanel" aria-labelledby="tab-work">
         <section class="hero ledger-section">
           <span class="page-number" aria-hidden="true">00</span>

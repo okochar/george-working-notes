@@ -25,3 +25,9 @@ Fonts: DM Sans, IBM Plex Mono, and Caveat from Google Fonts, locally hosted; ope
 ## Deploy
 
 Import this repository into Vercel with the Other framework preset. The root configuration publishes `dist/` without dependency installation or a build step. Pushes to the connected production branch deploy the updated portfolio. No environment variables are required.
+
+## Opening animation
+
+The opening draws a blue line across the paper, introduces George Okochar, and expands the O in Okochar into a live reveal of the notebook. It uses local typography, CSS, and an SVG mask with no animation library or video download. The normal sequence lasts about 2.8 seconds after the font is ready.
+
+It runs on the first homepage entry per tab session. Deep links open directly. Visitors can use Skip opening or Escape, and the footer offers Replay opening. Reduced-motion preferences bypass the sequence. Independent startup and runtime limits release the page if the animation cannot complete. Add `?opening=1` to the homepage URL to preview the opening again.
