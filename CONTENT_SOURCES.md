@@ -38,7 +38,26 @@ Captured on 30 October 2026 from the user's existing Next.js checkout at `C:/Use
 
 These screenshots replace the earlier invented CampusCrib preview. They document the current local interface, including development data visible in the app. They do not establish property availability, customer outcomes, or a launched marketplace.
 
-## External links
+## Additional owner-supplied work, reviewed 1 November 2026
+
+The Downloads/portfolio folder now includes additional images. Each of these was opened and visually reviewed before use; files were copied unchanged.
+
+| Source file | Site asset | Placement |
+|---|---|---|
+| Lageo call for designers.png | graphics/lageo-designers.png | Graphic Design / LAGEO series |
+| Lageo Anticpate.png | graphics/lageo-fashion.png | Graphic Design / LAGEO series |
+| flyer (Present).png | graphics/entryza-campaign.png | Graphic Design / Entryza campaign |
+| Frozen In Time.png | graphics/frozen-identity.png | Graphic Design / Frozen In Time; existing project gallery |
+| phc Thumbmail.png | projects/phcworkhub-design.png | Phcworkhub preview and project gallery |
+| TREVIDIA Thumbmail.png | projects/trevidia-design.png | Trevidia preview and project gallery |
+
+LAGEO matches were confirmed by the event name, fashion imagery, and poster copy. The Entryza flyer contains the product name, entertainment messaging, and device mockups. The Frozen In Time asset is the cream, blue, and pink yarn-inspired identity. Phcworkhub and Trevidia compositions were matched by their visible product names and their document-generation and invoicing designs. These replace the previous illustrative previews for those two entries.
+
+Also visually inspected: `Phcworkhub.png` (a product logo), `VETRA Thumbmail.png` (a studio website composition), and `image-removebg-preview (4).png` (Jacob & Co logo artwork). They are not added as separate graphic projects because the folder alone does not establish a distinct campaign or George's design scope. The existing Bookshop and Felx assets remain in their established entries. No unrelated PDF in the folder was used as an image or published.
+
+Artwork descriptions refer to what is visible in the supplied files; campaign outcomes, client approvals, and impact metrics are not inferred. Contact details, sample testimonials, prices, and historical calls to action within the artworks are part of the original designs.
+
+## External links (existing verified destinations)
 
 Checked 29 October 2026. Project contributions and dates remain grounded in the supplied CVs; a current website is not evidence that George designed every current screen or feature.
 

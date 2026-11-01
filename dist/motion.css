@@ -1,0 +1,5 @@
+/* Content is visible by default. The observer enables motion only after setup. */
+html.motion-enabled .motion-item{opacity:0;translate:0 var(--motion-rise,24px);transition:opacity 650ms ease var(--motion-delay,0ms),translate 850ms cubic-bezier(.22,1,.36,1) var(--motion-delay,0ms)}
+html.motion-enabled .motion-item.motion-visible{opacity:1;translate:0 0}
+.collection-switcher.motion-item{--motion-rise:-16px}
+@media(prefers-reduced-motion:reduce){html.motion-enabled .motion-item{opacity:1;translate:none;transition:none}}

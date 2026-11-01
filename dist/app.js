@@ -35,6 +35,7 @@ const projects = {
     workflow: [['Discover', 'Property search and filtering help structure accommodation discovery.'], ['Understand', 'Listing information gives each option the context a student needs to evaluate it.'], ['Build trust', 'Trust cues support the product’s focus on verified off-campus accommodation.']]
   },
   phcworkhub: {
+    gallery: [{src:'assets/projects/phcworkhub-design.png',label:'Website design',alt:'Original Phcworkhub website composition showing the homepage, document templates, and supporting sections'}],
     number: '002', title: 'Phcworkhub', subtitle: 'A clearer path through complex paperwork.', category: 'Tax automation / Business documents', role: 'Lead UI/UX designer & product tester', time: 'Design: Aug 2024 — Feb 2025 · Testing: 2024 — Apr 2025', status: 'Design & interface review',
     links: [{label:'Visit product website',url:'https://www.phcworkhub.com/'}],
     context: 'The platform covered tax automation, business documents, and estate paperwork. My design work organised complex requirements into onboarding, multi-step forms, document generation, and dashboard navigation.',
@@ -45,13 +46,14 @@ const projects = {
     workflow: [['Onboard', 'Organise onboarding so people can find the document workflow they need.'], ['Complete', 'Use structured form sections, signature fields, uploads, and validation states.'], ['Generate', 'Connect form submission to document generation and dashboard navigation.'], ['Review', 'Check the deployed interface against requirements and communicate issues clearly.']]
   },
   trevidia: {
+    gallery: [{src:'assets/projects/trevidia-design.png',label:'Website & pricing design',alt:'Original Trevidia website composition showing the invoicing homepage and pricing section'}],
     number: '003', title: 'Trevidia', subtitle: 'Making invoicing feel organised.', category: 'B2B SaaS / Invoicing & collaboration', role: 'Junior designer', time: 'Apr 2025 — Jul 2025', status: 'Product design',
     links: [{label:'Visit product website',url:'https://trevidia.com/'}],
     context: 'Trevidia is a B2B SaaS platform for invoicing, billing, and team workflows. I contributed responsive invoice templates, dashboards, and role-based collaboration flows.',
     contributions: ['Design invoice templates and dashboards for business-facing workflows.', 'Work on role-based flows covering invoice comments, tags, attachments, and feedback.', 'Adapt screens for desktop, tablet, and mobile using auto-layout and constraints.', 'Standardise spacing, layout behaviour, and reusable components for developer handover.'],
     focus: 'Consistency is useful',
     note: 'An invoicing experience has to stay coherent across screen sizes and team roles. The work included layout behaviour and reusable patterns, alongside individual screens.',
-    details: 'My contributions focused on responsive design, collaboration, and preparation for implementation. The preview is an illustrative interface study rather than a screenshot of the live product.',
+    details: 'My contributions focused on responsive design, collaboration, and preparation for implementation. The gallery shows my supplied website and pricing design composition.',
     workflow: [['Create', 'Invoice templates and dashboard layouts organise the information.'], ['Collaborate', 'Role-based flows include comments, tags, attachments, and feedback.'], ['Adapt', 'Auto-layout, constraints, and reusable components support different screen sizes.'], ['Hand over', 'Standardised spacing and component behaviour make the designs ready for implementation.']]
   },
   entryza: {
@@ -77,6 +79,7 @@ const projects = {
     workflow: [['Discover', 'Onboarding, browsing, and book details introduce the available reading experience.'], ['Explore', 'Previews and audio controls support exploring a title.'], ['Access', 'Cart, checkout, and subscriptions connect discovery to book access.']]
   },
   frozen: {
+    gallery: [{src:'assets/graphics/frozen-identity.png',label:'Brand identity',alt:'Frozen In Time blue and pink identity on a cream background'}],
     number: '006', title: 'Frozen In Time', subtitle: 'From brand identity to checkout.', category: 'Accessories / E-commerce', role: 'Branding, web development & planning', time: 'Selected project', status: 'Brand & website project', icon: 'sparkles',
     context: 'Frozen In Time is a crochet and resin accessories brand. The project connected its visual identity, website, payments, and go-to-market planning.',
     contributions: ['Lead the brand identity work.', 'Develop the website.', 'Integrate payments into the shopping experience.', 'Lead go-to-market planning for the brand.'],
@@ -225,6 +228,12 @@ function route() {
     closeProject();
     activateTab('work',false);
     requestAnimationFrame(() => document.querySelector('#selected-work').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'}));
+    routeInitialised = true;
+    return;
+  }
+  if (hash === 'graphics' || hash.startsWith('graphics/')) {
+    closeProject();
+    activateTab('work', routeInitialised && !hash.includes('/') && !document.querySelector('#graphic-dialog').open);
     routeInitialised = true;
     return;
   }

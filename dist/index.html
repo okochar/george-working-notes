@@ -12,11 +12,7 @@
   <script>
     (() => {
       try {
-        let seen = false;
-        try { seen = sessionStorage.getItem('george-notebook-opening-v1') === 'seen'; } catch {}
-        const home = !location.hash || location.hash === '#work';
-        const replay = new URLSearchParams(location.search).has('opening');
-        if (!home || matchMedia('(prefers-reduced-motion: reduce)').matches || (seen && !replay)) return;
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
         document.documentElement.classList.add('intro-active', 'intro-pending');
         // The notebook always remains available if the enhancement cannot start.
         setTimeout(() => {
@@ -25,16 +21,21 @@
           const opening = document.getElementById('opening-screen');
           if (opening?.open) opening.close();
           root.classList.remove('intro-active', 'intro-pending', 'intro-revealing');
+          document.dispatchEvent(new CustomEvent('notebook:opening-complete'));
         }, 6500);
       } catch {}
     })();
   </script>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="project-media.css">
   <link rel="stylesheet" href="opening.css">
+  <link rel="stylesheet" href="collections.css">
+  <link rel="stylesheet" href="motion.css">
   <script type="module" src="app.js"></script>
   <script type="module" src="opening.js"></script>
+  <script type="module" src="collections.js"></script>
+  <script type="module" src="motion.js"></script>
 </head>
 <body>
   <dialog id="opening-screen" class="opening-screen" aria-labelledby="opening-label">
@@ -62,7 +63,6 @@
   <div class="notebook">
     <header class="site-header">
       <a class="identity" href="#work" aria-label="George Okochar, notebook home">
-        <span class="monogram">GO<span class="monogram-corner"></span></span>
         <span class="identity-text"><strong>George Okochar</strong><span class="micro">Working notes</span></span>
       </a>
       <nav aria-label="Notebook chapters">
@@ -77,6 +77,15 @@
 
     <main id="main" tabindex="-1">
       <section id="panel-work" class="chapter" role="tabpanel" aria-labelledby="tab-work">
+        <div class="collection-switcher ledger-section">
+          <span class="micro collection-caption">Two sides of my practice</span>
+          <div class="collection-tabs" role="tablist" aria-label="Design collections">
+            <button type="button" role="tab" id="collection-tab-ui" aria-selected="true" aria-controls="collection-ui" data-collection="ui"><span class="collection-index" aria-hidden="true">01</span> UI Design <span class="collection-arrow" aria-hidden="true">↘</span></button>
+            <button type="button" role="tab" id="collection-tab-graphics" aria-selected="false" aria-controls="collection-graphics" tabindex="-1" data-collection="graphics"><span class="collection-index" aria-hidden="true">02</span> Graphic Design <span class="collection-arrow" aria-hidden="true">↘</span></button>
+          </div>
+          <span class="hand-note collection-margin" aria-hidden="true">different pages, same curiosity.</span>
+        </div>
+        <div id="collection-ui" class="collection-panel" role="tabpanel" aria-labelledby="collection-tab-ui" tabindex="0">
         <section class="hero ledger-section">
           <span class="page-number" aria-hidden="true">00</span>
           <div class="hero-copy">
@@ -111,11 +120,11 @@
           </article>
           <div class="entry-pair">
             <article class="entry">
-              <button class="project-preview documents-preview" type="button" data-project="phcworkhub" aria-label="Open the Phcworkhub project entry"><span class="preview-label">Interface study</span><span class="document-app mini-app"><span class="mini-sidebar"><strong><span class="mini-cross">✚</span> Phcworkhub</strong><span>▦ &nbsp; Dashboard</span><span class="selected">▤ &nbsp; Applications</span><span>▱ &nbsp; Documents</span><span>▧ &nbsp; Payments</span><span>⚙ &nbsp; Settings</span></span><span class="mini-content"><strong class="mini-title">New application</strong><span class="mini-progress"><b>1</b> Details <i></i><b>2</b> Documents <i></i><b>3</b> Review</span><strong>Personal information</strong><span class="fake-form-row"><span>Full name<span class="fake-input">Your name</span></span><span>Email address<span class="fake-input">you@example.com</span></span></span><span class="fake-form-row"><span><strong>Document upload</strong><span class="upload-field"><span data-icon="upload"></span>Upload documents<span>PDF, PNG or JPG</span></span></span><span><strong>Signature</strong><span class="signature-field hand-note">Your signature</span><span class="fake-save">Save &amp; continue →</span></span></span></span></span></button>
+              <button class="project-preview original-preview phc-original-preview" type="button" data-project="phcworkhub" aria-label="Open the Phcworkhub project entry"><span class="preview-label">My design screens</span><img src="assets/projects/phcworkhub-design.png" alt="George’s supplied Phcworkhub website design with document templates and a green visual system" loading="lazy"></button>
               <div class="entry-info"><span class="micro">Entry 002</span><h3>Phcworkhub</h3><p class="entry-tagline">A clearer path through complex paperwork.</p><div class="entry-bottom"><p class="entry-role">Product design &amp; interface testing</p><button type="button" class="text-link" data-project="phcworkhub">Open entry <span aria-hidden="true">↗</span></button></div></div>
             </article>
             <article class="entry">
-              <button class="project-preview invoice-preview" type="button" data-project="trevidia" aria-label="Open the Trevidia project entry"><span class="preview-label">Interface study</span><span class="invoice-app mini-app"><span class="mini-sidebar"><strong><span class="mini-app-logo">T</span> Trevidia</strong><span class="selected">▦ &nbsp; Dashboard</span><span>▤ &nbsp; Invoices</span><span>♧ &nbsp; Clients</span><span>▱ &nbsp; Products</span><span>⚙ &nbsp; Settings</span></span><span class="mini-content"><span class="invoice-heading"><strong class="mini-title">Invoices</strong><span class="fake-save">New invoice +</span></span><span class="invoice-tabs"><b>All</b> Draft &nbsp; Sent &nbsp; Paid</span><span class="invoice-table"><span class="table-head">Invoice <span>Client</span><span>Status</span></span><span>INV-001<span>Client studio</span><b class="paid">Paid</b></span><span>INV-002<span>Design team</span><b class="sent">Sent</b></span><span>INV-003<span>Product team</span><b class="draft">Draft</b></span><span>INV-004<span>Creative studio</span><b class="paid">Paid</b></span></span></span><span class="invoice-sheet"><span class="micro">Trevidia</span><strong>Invoice</strong><span>INV-001</span><span class="invoice-line"></span><span>Bill to<br>Client studio</span><span class="invoice-line"></span><span>Design services</span><span class="invoice-total">Thank you.</span><span class="invoice-swoop"></span></span></span></button>
+              <button class="project-preview original-preview trevidia-original-preview" type="button" data-project="trevidia" aria-label="Open the Trevidia project entry"><span class="preview-label">My design screens</span><img src="assets/projects/trevidia-design.png" alt="George’s supplied Trevidia invoicing website design and pricing layout" loading="lazy"></button>
               <div class="entry-info"><span class="micro">Entry 003</span><h3>Trevidia</h3><p class="entry-tagline">Making invoicing feel organised.</p><div class="entry-bottom"><p class="entry-role">Responsive interfaces &amp; collaboration</p><button type="button" class="text-link" data-project="trevidia">Open entry <span aria-hidden="true">↗</span></button></div></div>
             </article>
           </div>
@@ -131,6 +140,35 @@
           </div>
           <details class="more-entries"><summary>Elsewhere in the notebook <span class="micro">2 more entries</span><span class="details-plus" aria-hidden="true">+</span></summary><div class="small-entries"><button type="button" data-project="entryza"><span class="micro">004 / Mobility</span><strong>Entryza</strong><span>Onboarding, ticketing &amp; shared components ↗</span></button><button type="button" data-project="frozen"><span class="micro">006 / Commerce</span><strong>Frozen In Time</strong><span>From brand identity to checkout ↗</span></button></div></details>
         </section>
+
+        </div>
+        <div id="collection-graphics" class="collection-panel" role="tabpanel" aria-labelledby="collection-tab-graphics" tabindex="0" hidden>
+          <section class="graphics-intro ledger-section">
+            <span class="page-number" aria-hidden="true">00</span>
+            <p class="micro eyebrow">Posters / Campaigns / Identity</p>
+            <h1>Made to<br><span class="ink">catch your eye.</span></h1>
+            <p class="intro">Another side of my notebook. A collection of posters, campaign visuals, and identities, with room for colour, culture, and a little personality.</p>
+            <span class="hand-note graphics-margin" aria-hidden="true">Sometimes, the story starts<br>with a single image. ↙</span>
+          </section>
+          <section id="graphic-work" class="graphic-work ledger-section" aria-labelledby="graphics-heading">
+            <span class="page-number" aria-hidden="true">01</span>
+            <div class="section-heading"><div><p class="micro">02 / Visual entries</p><h2 id="graphics-heading">A different kind of expression.</h2></div><span class="hand-note section-aside">A closer look? Open a piece. ↙</span></div>
+            <div class="graphics-grid">
+              <article class="graphic-entry">
+                <button type="button" class="graphic-preview graphic-lageo" data-graphic="lageo" aria-label="Open the LAGEO fashion campaign"><img src="assets/graphics/lageo-designers.png" width="1587" height="2245" alt="LAGEO call for designers poster featuring Nigerian fashion, textiles, and cultural dress" loading="lazy"><span class="graphic-open" aria-hidden="true">View series <span>↗</span></span></button>
+                <div class="graphic-info"><p class="micro">G.01 / Event campaign · 2 pieces</p><h3>LAGEO</h3><p>Fashion, fabric, and culture.</p><button type="button" class="text-link" data-graphic="lageo">Open the series <span aria-hidden="true">↗</span></button></div>
+              </article>
+              <article class="graphic-entry">
+                <button type="button" class="graphic-preview graphic-entryza" data-graphic="entryza" aria-label="Open the Entryza campaign poster"><img src="assets/graphics/entryza-campaign.png" width="1032" height="2064" alt="Entryza entertainment campaign poster with a concert crowd, product mockups, and blue typography" loading="lazy"><span class="graphic-open" aria-hidden="true">View poster <span>↗</span></span></button>
+                <div class="graphic-info"><p class="micro">G.02 / Campaign poster</p><h3>Entryza</h3><p>Discover. Book. Experience.</p><button type="button" class="text-link" data-graphic="entryza">Open the poster <span aria-hidden="true">↗</span></button></div>
+              </article>
+              <article class="graphic-entry graphic-entry-wide">
+                <button type="button" class="graphic-preview graphic-frozen" data-graphic="frozen" aria-label="Open the Frozen In Time identity"><img src="assets/graphics/frozen-identity.png" width="500" height="500" alt="Frozen In Time identity using blue and pink lettering, a yarn detail, and a cream background" loading="lazy"><span class="graphic-open" aria-hidden="true">View identity <span>↗</span></span></button>
+                <div class="graphic-info"><p class="micro">G.03 / Brand identity</p><h3>Frozen In Time</h3><p>A softer, more playful expression.</p><button type="button" class="text-link" data-graphic="frozen">Open the identity <span aria-hidden="true">↗</span></button></div>
+              </article>
+            </div>
+          </section>
+        </div>
 
         <section class="about-teaser ledger-section"><button class="page-number margin-toggle" type="button" data-note="about-margin" aria-controls="about-margin" aria-expanded="false" aria-label="Read the education margin note">02<span>+</span></button><div><p class="micro">02 / A note about me</p><h2>Curious by nature.<br>Organised by practice.</h2></div><div class="teaser-copy"><p>My work connects product design, practical testing, and clear communication. I like making complicated workflows easier to navigate.</p><div class="company-line">Entryza <span>·</span> Vetra Studio <span>·</span> Trevidia <span>·</span> Phcworkhub</div><a href="#about" class="text-link">More about me <span aria-hidden="true">↗</span></a></div><div class="teaser-margin hand-note">B.Sc. Computer Science<br>Dominican University<br>2025 <span aria-hidden="true">↙</span></div><div id="about-margin" class="paper-note" hidden><p>My final-year project explored facial expression recognition. My coursework included software engineering, databases, web development, and human-computer interaction.</p></div></section>
       </section>
@@ -157,6 +195,7 @@
   </div>
 
   <dialog id="project-dialog" aria-labelledby="project-title"><div class="dialog-sheet"><header class="dialog-header"><span class="micro" id="project-number"></span><button type="button" class="close-dialog" aria-label="Close project entry"><span>Back to notebook</span> <span aria-hidden="true">×</span></button></header><div id="project-content"><h2 id="project-title" class="sr-only">Project entry</h2></div><footer class="dialog-footer"><button type="button" class="text-link" id="next-project">Next entry <span aria-hidden="true">→</span></button><a href="#contact" class="text-link" id="discuss-project">Have a similar challenge? Let’s talk ↗</a></footer></div></dialog>
+  <dialog id="graphic-dialog" aria-labelledby="graphic-title"><div class="graphic-sheet"><header class="dialog-header"><span class="micro">Visual notes / <span id="graphic-number"></span></span><button type="button" class="close-graphic" aria-label="Close graphic design entry"><span>Back to collection</span><span aria-hidden="true">×</span></button></header><div class="graphic-view-heading"><p class="micro" id="graphic-kind"></p><h2 id="graphic-title">Graphic design</h2><p id="graphic-description"></p></div><div class="graphic-controls"><div class="graphic-image-choices" role="group" aria-label="Choose artwork"></div><span id="graphic-count" class="micro" aria-live="polite"></span></div><figure class="graphic-figure"><img id="graphic-image" alt=""><figcaption><span id="graphic-caption"></span><a id="graphic-original" class="text-link" target="_blank" rel="noopener">Open full-size image ↗</a></figcaption></figure><footer class="dialog-footer"><button type="button" class="text-link" id="next-graphic">Next visual entry <span aria-hidden="true">→</span></button><a href="#contact" class="text-link">Let’s make something together ↗</a></footer></div></dialog>
   <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
 </body>
 </html>

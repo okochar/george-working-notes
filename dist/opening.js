@@ -14,11 +14,7 @@ let safetyTimer = 0;
 let sequence = 0;
 let geometry = null;
 
-function rememberOpening() {
-  try { sessionStorage.setItem('george-notebook-opening-v1', 'seen'); } catch {}
-}
-
-function finishOpening({ remember = true, focus = true } = {}) {
+function finishOpening({ focus = true } = {}) {
   const wasActive = active;
   active = false;
   sequence += 1;
@@ -27,9 +23,10 @@ function finishOpening({ remember = true, focus = true } = {}) {
   if (opening.open) opening.close();
   opening.classList.remove('is-writing', 'is-revealing');
   root.classList.remove('intro-active', 'intro-pending', 'intro-revealing');
-  if (remember && wasActive) rememberOpening();
+  if (wasActive) document.dispatchEvent(new CustomEvent('notebook:opening-complete'));
   if (focus && wasActive) {
-    main.focus({ preventScroll: true });
+    const activeDialog = document.querySelector('dialog[open] button');
+    (activeDialog || main).focus({ preventScroll: true });
     window.scrollTo({ top: 0, behavior: 'instant' });
   }
 }
@@ -72,13 +69,14 @@ function paintReveal(progress) {
 async function startOpening() {
   if (active) return;
   if (reducedMotion.matches || typeof opening.showModal !== 'function') {
-    finishOpening({ remember: false, focus: false });
+    finishOpening({ focus: false });
     return;
   }
   active = true;
   const currentSequence = ++sequence;
   root.classList.add('intro-active');
   root.classList.remove('intro-pending');
+  document.dispatchEvent(new CustomEvent('notebook:opening-start'));
   opening.classList.remove('is-writing', 'is-revealing');
   hole.setAttribute('rx', '0');
   hole.setAttribute('ry', '0');
@@ -104,6 +102,7 @@ async function startOpening() {
           measurePortal();
           opening.classList.add('is-revealing');
           root.classList.add('intro-revealing');
+          document.dispatchEvent(new CustomEvent('notebook:opening-reveal'));
         }
         paintReveal(Math.min(1, (elapsed - 1650) / 1150));
       }
@@ -131,7 +130,7 @@ window.addEventListener('hashchange', () => {
   if (active) finishOpening();
 });
 window.addEventListener('pageshow', event => {
-  if (event.persisted) finishOpening({ remember: false, focus: false });
+  if (event.persisted) finishOpening({ focus: false });
 });
 reducedMotion.addEventListener('change', event => {
   if (event.matches) finishOpening();
