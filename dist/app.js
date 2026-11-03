@@ -15,25 +15,105 @@ const icons = {
 
 const projects = {
   campuscrib: {
-    number: '001', title: 'CampusCrib', subtitle: 'Building trust into student housing.', category: 'Student housing / Product development', role: 'Co-founder & lead designer', time: '2025 — Present', status: 'In development',
-    links: [{label:'Open live preview',url:'https://campuscrib-three.vercel.app/'}],
-    galleryLabel: 'From my local CampusCrib build',
-    gallery: [
-      {src:'assets/projects/campuscrib-home-desktop.jpg',label:'Homepage / desktop',alt:'CampusCrib local homepage with student housing preferences and a friendly green house illustration'},
-      {src:'assets/projects/campuscrib-browse-desktop.jpg',label:'Discovery & filters / desktop',alt:'CampusCrib local accommodation discovery screen with school, property, distance, verification and budget filters'},
-      {src:'assets/projects/campuscrib-property-desktop.jpg',label:'Property details & listed fees',alt:'CampusCrib local property detail screen showing a property photo, itemised tenancy fees and landlord contact entry point'},
-      {src:'assets/projects/campuscrib-waitlist-desktop.jpg',label:'Pre-launch waitlist',alt:'CampusCrib local pre-launch waitlist design with an email field and product value propositions'},
-      {src:'assets/projects/campuscrib-landlord-desktop.jpg',label:'Landlord onboarding',alt:'CampusCrib local landlord registration screen with role selection and a two-step account flow'},
-      {src:'assets/projects/campuscrib-home-mobile.jpg',label:'Homepage / mobile',alt:'CampusCrib local mobile homepage showing the responsive housing preference and discovery controls'},
-      {src:'assets/projects/campuscrib-browse-mobile.jpg',label:'Discovery / mobile',alt:'CampusCrib local mobile accommodation discovery interface with filters and listing preview'}
+    "number": "001",
+    "title": "CampusCrib",
+    "subtitle": "A clearer starting point for student housing.",
+    "category": "Student housing / Product development",
+    "role": "Co-founder & lead designer",
+    "time": "2025 — Present",
+    "status": "In development",
+    "previewCaption": "Project cover · A preview of the design direction for an ongoing product.",
+    "context": "A student housing project shaped by my own search for a place off campus. My work connects the product concept, user experience, interface system, and front-end architecture.",
+    "contributions": [
+        "Help define the product concept and priorities with my co-founder.",
+        "Plan the user experience before developing the visual design.",
+        "Develop the responsive interface system and contribute to the front-end architecture.",
+        "Prepare materials that communicate the product to stakeholders."
     ],
-    context: 'CampusCrib is a student housing marketplace in development, focused on verified off-campus accommodation. The product work centres on helping students discover accommodation with useful listing information and clearer trust cues.',
-    contributions: ['Help define product priorities and the overall product concept.', 'Develop the responsive interface system and front-end architecture.', 'Design accommodation discovery around property search, filtering, listing information, and trust cues.', 'Prepare business, stakeholder, and investor materials during development.'],
-    focus: 'Trust is part of the journey',
-    note: 'Accommodation discovery involves more than a list of properties. Search, listing information, and verification cues need to work together so students can understand what they are looking at.',
-    details: 'Captured from my local CampusCrib build on 30 October 2026: discovery, property details, the waitlist, and landlord onboarding, with desktop and mobile views. The marketplace is still in development; listing data shown documents the interface rather than property availability or product outcomes.',
-    workflow: [['Discover', 'Property search and filtering help structure accommodation discovery.'], ['Understand', 'Listing information gives each option the context a student needs to evaluate it.'], ['Build trust', 'Trust cues support the product’s focus on verified off-campus accommodation.']]
-  },
+    "focus": "Work through the UX first.",
+    "note": "I wanted to understand how the experience should work before deciding how the screens should look. That became the starting point for my design decisions.",
+    "extraNote": "This project grew from an experience my co-founder and I shared. It connects the way I think about a problem with the work of shaping and building a product.",
+    "details": "An ongoing product in development. This entry shares the origin and design approach; additional work will be shared as development progresses.",
+    "overview": [
+        [
+            "Starting point",
+            "A housing search I experienced"
+        ],
+        [
+            "Design priority",
+            "Clarity before commitment"
+        ],
+        [
+            "Current stage",
+            "Product development"
+        ]
+    ],
+    "sections": [
+        {
+            "title": "Why I started",
+            "paragraphs": [
+                "In 2025, a friend and I were looking for somewhere to live while I was at university. We could find places, but deciding whether an option was right for us was much harder than finding a listing. The search made me think about how much a student needs to understand before choosing a home.",
+                "That experience stayed with us. It eventually led us to start CampusCrib, an ongoing student housing project. For me, the starting point was personal: I wanted to work on a problem I had experienced and create a clearer starting point for someone in the same position."
+            ]
+        },
+        {
+            "title": "The problem I chose to focus on",
+            "paragraphs": [
+                "I framed the design challenge around the student’s ability to understand their options. Finding somewhere to live involves practical questions and a consequential decision. The experience needs to help a person make sense of what they are looking at and understand how to move forward.",
+                "My starting point was the housing search we had lived through. It gave the project its motivation and an initial perspective to design from. As the product develops, that perspective needs to be evaluated against how other students understand and use the experience."
+            ]
+        },
+        {
+            "title": "The key decision: UX before visual design",
+            "paragraphs": [
+                "Before thinking about the visual design, I worked through how I wanted the experience to function. I considered what a first-time visitor would need to understand, how information should be organised, and how each part of the journey should lead into the next.",
+                "That decision gave the interface work a purpose. Instead of starting with a collection of screens, I started with the decisions a student would need to make. The layout and visual hierarchy could then support that sequence.",
+                "The principle behind the work is clarity before commitment. I wanted the experience to give people room to understand their options and make a considered decision. That priority guides how I think about the journey while the product is being developed."
+            ]
+        },
+        {
+            "title": "My contribution",
+            "paragraphs": [
+                "As co-founder and lead designer, my work connects the product’s direction with its interface and development. I work with my co-founder on the concept and priorities, then carry that thinking into the user experience and the way the interface is structured."
+            ],
+            "points": [
+                "Product thinking: help define the concept and the priorities for the experience.",
+                "UX: work through the journey before developing the visual design.",
+                "Interface design: develop a responsive system for the product’s screens.",
+                "Development: contribute to the front-end architecture and the local development build.",
+                "Communication: prepare materials that explain the product to stakeholders."
+            ]
+        },
+        {
+            "title": "Where the work stands",
+            "paragraphs": [
+                "CampusCrib is still in development. The work has progressed into a local development build with desktop and mobile interfaces. This case study presents the origin of the project, my responsibility, and the design reasoning behind the work at this stage.",
+                "The next question is how well the experience supports the decisions it was designed around. A useful next step is to observe students using it, identify where the journey needs explanation, and use those observations to guide revisions. That is a direction for evaluation, rather than a result claimed here."
+            ]
+        },
+        {
+            "title": "What this project means to me",
+            "paragraphs": [
+                "CampusCrib brings together my experience as a student, my interest in product design, and my Computer Science background. It is an opportunity to connect a problem I care about with the practical work of shaping and building a digital product.",
+                "The part I keep returning to is the UX. I want to be able to explain why the experience works the way it does, and how those choices help the person using it. That is the standard I am working toward as the project develops."
+            ]
+        }
+    ],
+    "workflow": [
+        [
+            "Frame",
+            "Start with the problem and the decisions the experience needs to support."
+        ],
+        [
+            "Structure",
+            "Work through the user experience before developing the visual design."
+        ],
+        [
+            "Build",
+            "Carry the design direction into the interface system and development work."
+        ]
+    ]
+},
   phcworkhub: {
     gallery: [{src:'assets/projects/phcworkhub-design.png',label:'Website design',alt:'Original Phcworkhub website composition showing the homepage, document templates, and supporting sections'}],
     number: '002', title: 'Phcworkhub', subtitle: 'A clearer path through complex paperwork.', category: 'Tax automation / Business documents', role: 'Lead UI/UX designer & product tester', time: 'Design: Aug 2024 — Feb 2025 · Testing: 2024 — Apr 2025', status: 'Design & interface review',
@@ -158,7 +238,7 @@ function previewFor(slug, project) {
     const preview = document.createElement('div');
     preview.className = original.className;
     preview.innerHTML = original.innerHTML;
-    return `<div class="case-preview">${preview.outerHTML}</div><p class="case-preview-caption">Interface study · Illustrative portfolio preview, not a shipped product screenshot.</p>`;
+    return `<div class="case-preview">${preview.outerHTML}</div><p class="case-preview-caption">${escapeHtml(project.previewCaption || 'Interface study · Illustrative portfolio preview, not a shipped product screenshot.')}</p>`;
   }
   return `<div class="case-preview case-simple-art"><div><span class="micro">${project.category}</span><strong>${project.title}</strong></div>${icon(project.icon)}</div>`;
 }
@@ -193,13 +273,29 @@ function selectGalleryImage(index) {
   content.querySelector('[data-gallery-index="' + galleryIndex + '"]')?.scrollIntoView({block:'nearest',inline:'nearest'});
 }
 
+function caseBodyFor(project) {
+  if (project.sections?.length) {
+    return project.sections.map(section => `<section class="case-section">
+      <h3>${escapeHtml(section.title)}</h3>
+      ${(section.paragraphs || []).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join('')}
+      ${section.points?.length ? `<ul>${section.points.map(point => `<li>${escapeHtml(point)}</li>`).join('')}</ul>` : ''}
+    </section>`).join('');
+  }
+  return `<section class="case-section"><h3>The context</h3><p>${project.context}</p></section><section class="case-section"><h3>What I contributed</h3><ul>${project.contributions.map(point => `<li>${point}</li>`).join('')}</ul></section><section class="case-section"><h3>A note on the scope</h3><p>${project.details}</p></section>`;
+}
+
+function caseOverviewFor(project) {
+  if (!project.overview?.length) return '';
+  return `<dl class="case-overview">${project.overview.map(([label, value]) => `<div><dt class="micro">${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</dl>`;
+}
+
 function showProject(slug) {
   const project = projects[slug];
   if (!project) return;
   currentProject = slug;
   galleryIndex = 0;
   document.querySelector('#project-number').textContent = `Working notes / Entry ${project.number}`;
-  content.innerHTML = `<div class="case-heading"><p class="micro">${project.category}</p><h2 id="project-title">${project.title}</h2><p class="case-subtitle">${project.subtitle}</p><div class="case-meta"><span><span class="micro">Role</span>${project.role}</span><span><span class="micro">When</span>${project.time}</span><span class="status">${project.status}</span></div></div>${previewFor(slug, project)}<div class="case-body"><div><section class="case-section"><h3>The context</h3><p>${project.context}</p></section><section class="case-section"><h3>What I contributed</h3><ul>${project.contributions.map(point => `<li>${point}</li>`).join('')}</ul></section><section class="case-section"><h3>A note on the scope</h3><p>${project.details}</p></section></div><aside class="paper-note case-note"><p class="hand-note">${project.focus}</p><p>${project.note}</p><button type="button" class="text-link" data-note="case-extra-note" aria-expanded="false" aria-controls="case-extra-note">Read between the lines <span aria-hidden="true">+</span></button><div id="case-extra-note" hidden><p style="margin-top:16px">${slug === 'campuscrib' ? 'This entry is an ongoing piece of the notebook. Its development status is kept visible so the scope of the work stays clear.' : 'The entry focuses on my contribution and the work involved. Each decision is easier to understand when it is connected to the journey around it.'}</p></div></aside></div><section class="case-workflow"><p class="micro">Follow the workflow / Select a step</p><div class="workflow-buttons">${project.workflow.map(([label],index) => `<button type="button" data-workflow="${index}" aria-pressed="${index === 0}">${String(index + 1).padStart(2,'0')} &nbsp; ${escapeHtml(label)}</button>`).join('')}</div><p class="workflow-detail" id="workflow-detail" aria-live="polite">${project.workflow[0][1]}</p></section>`;
+  content.innerHTML = `<div class="case-heading"><p class="micro">${project.category}</p><h2 id="project-title">${project.title}</h2><p class="case-subtitle">${project.subtitle}</p><div class="case-meta"><span><span class="micro">Role</span>${project.role}</span><span><span class="micro">When</span>${project.time}</span><span class="status">${project.status}</span></div></div>${previewFor(slug, project)}${caseOverviewFor(project)}<div class="case-body"><div>${caseBodyFor(project)}</div><aside class="paper-note case-note"><p class="hand-note">${project.focus}</p><p>${project.note}</p><button type="button" class="text-link" data-note="case-extra-note" aria-expanded="false" aria-controls="case-extra-note">Read between the lines <span aria-hidden="true">+</span></button><div id="case-extra-note" hidden><p style="margin-top:16px">${escapeHtml(project.extraNote || 'The entry focuses on my contribution and the work involved. Each decision is easier to understand when it is connected to the journey around it.')}</p></div></aside></div><section class="case-workflow"><p class="micro">Follow the workflow / Select a step</p><div class="workflow-buttons">${project.workflow.map(([label],index) => `<button type="button" data-workflow="${index}" aria-pressed="${index === 0}">${String(index + 1).padStart(2,'0')} &nbsp; ${escapeHtml(label)}</button>`).join('')}</div><p class="workflow-detail" id="workflow-detail" aria-live="polite">${project.workflow[0][1]}</p></section>`;
   content.querySelector('.case-heading').insertAdjacentHTML('beforeend',projectLinks(project));
   hydrateIcons(content);
   document.querySelector('#next-project').innerHTML = `Next entry: ${projects[projectOrder[(projectOrder.indexOf(slug) + 1) % projectOrder.length]].title} <span aria-hidden="true">→</span>`;

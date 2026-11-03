@@ -22,7 +22,7 @@ The remaining three files are smaller exports of identities already represented 
 
 Main project previews without matching supplied images are retained as illustrative interface studies. The Bookshop and Felx entries use supplied design files and are labelled accordingly. Sample pricing and testimonial content appearing inside a supplied design is not presented as George's verified business impact.
 
-## CampusCrib local screenshots
+## CampusCrib local screenshots — retained privately
 
 Captured on 30 October 2026 from the user's existing Next.js checkout at `C:/Users/baway/Downloads/campuscrib_phase2/campuscrib`, running in development at `http://127.0.0.1:3002`. No CampusCrib screenshot was taken from the online deployment. No fixture interception, fabricated UI, account creation, form submission, or application source change was used.
 
@@ -36,7 +36,7 @@ Captured on 30 October 2026 from the user's existing Next.js checkout at `C:/Use
 | campuscrib-home-mobile.jpg | / | Homepage, mobile |
 | campuscrib-browse-mobile.jpg | /browse | Discovery, mobile |
 
-These screenshots replace the earlier invented CampusCrib preview. They document the current local interface, including development data visible in the app. They do not establish property availability, customer outcomes, or a launched marketplace.
+These captures were previously used in the portfolio. Following George’s confidentiality instruction, they are now retained outside the repository and web root, and are not included in the current deployable files. They document the current local interface, including development data visible in the app. They do not establish property availability, customer outcomes, or a launched marketplace.
 
 ## Additional owner-supplied work, reviewed 1 November 2026
 
@@ -61,10 +61,17 @@ Artwork descriptions refer to what is visible in the supplied files; campaign ou
 
 Checked 29 October 2026. Project contributions and dates remain grounded in the supplied CVs; a current website is not evidence that George designed every current screen or feature.
 
-- CampusCrib: https://campuscrib-three.vercel.app/ — provided directly by George. Labelled as a live preview; project remains in development.
+- CampusCrib: the previously supplied preview link is withheld from the public portfolio while the product is in development, following George’s confidentiality instruction.
 - Entryza: https://thentryza.com/ — official product website, matching ticketing, mobility, and music scope.
 - Entryza Android: https://play.google.com/store/apps/details?id=com.thentryza.entryza_mobile — official Google Play listing, publisher ENTRYZA LTD, support domain thentryza.com.
 - PhcWorkHub: https://www.phcworkhub.com/ — product website linked by the company's LinkedIn page: https://www.linkedin.com/company/phcworkhub/.
 - Trevidia: https://trevidia.com/ — current product website, also confirmed by the company's LinkedIn page: https://uk.linkedin.com/company/trevidia.
 
 George confirmed that he has no URLs for The Bookshop, Frozen In Time, or Felx. No guessed URLs have been added for them. Same-name CampusCrib and Felx results were not used.
+
+
+## CampusCrib case study and publication scope
+
+The expanded public story is based on George’s own account of a housing search in 2025, his decision to plan the UX before the visual design, and the responsibilities established in his supplied CV. The account is presented as firsthand experience, without invented interviews, usability studies, adoption metrics, or launch outcomes.
+
+The public entry omits unpublished operating procedures, transaction mechanics, commercial rules, and detailed product flows. It also omits identifiable parties and exact figures from the personal account. The local captures and outbound preview link have been removed from the current public-facing source. The cover is explicitly a project cover; it is not presented as a product screenshot. External editorial reading is kept separately from claims about George’s own design process.

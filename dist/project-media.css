@@ -6,3 +6,23 @@
 /* Keep image navigation compact, including seven local CampusCrib captures. */
 .campus-original-preview{background:#e5ebe2}.entry-featured .campus-original-preview{aspect-ratio:auto;min-height:340px}.entry-featured .campus-original-preview>img{max-height:none;height:auto;border:1px solid #d1d9ce;border-radius:3px;box-shadow:0 10px 30px #24392915}.gallery-thumbs{flex-wrap:nowrap;overflow-x:auto;padding:2px 2px 9px;scrollbar-width:thin}.gallery-thumbs button{flex:0 0 125px;width:125px;min-width:0}.gallery-thumbs button>img{height:61px}
 @media(max-width:600px){.entry-featured .campus-original-preview{aspect-ratio:1.5;min-height:0}.gallery-thumbs button{flex-basis:112px;width:112px}.gallery-thumbs button>img{height:65px}}
+
+/* An editorial cover keeps the pre-launch product's screens private. */
+.campus-case-cover{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:18px;min-height:350px;padding:50px 35px 40px;text-align:left;color:#173e32;background-color:#e9ede3;background-image:radial-gradient(#567c5e38 .7px,transparent .8px);background-size:22px 22px;overflow:hidden}
+.campus-case-cover:hover{color:#173e32;background-color:#e2e9db}
+.campus-case-cover>strong{position:relative;font-size:clamp(33px,3.4vw,48px);letter-spacing:-2.1px;line-height:1.05}
+.campus-case-cover>strong>span{color:#759959}
+.campus-cover-mark{display:block;width:72px;height:66px;margin-bottom:2px;rotate:-4deg}
+.campus-cover-mark svg{width:100%;height:100%;fill:none;stroke:#365b43;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.campus-cover-line{font-size:17px;line-height:1.45;letter-spacing:-.2px}
+.campus-cover-foot{font-size:7px;letter-spacing:1.3px;color:#526a55;margin-top:5px}
+.campus-case-cover .preview-label{color:#526a55}
+.case-preview .campus-case-cover{min-height:320px;aspect-ratio:auto;padding:50px 45px 35px;gap:14px}
+.case-preview .campus-case-cover>strong{font-size:52px}
+.case-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:30px 0 0;padding:22px 0;border-top:1px solid #bdcce1;border-bottom:1px solid #bdcce1}
+.case-overview dt{font-size:8px;letter-spacing:1.1px;color:#536889}
+.case-overview dd{margin:9px 0 0;font-size:14px;line-height:1.5}
+.case-section>p+p{margin-top:16px}
+@media(max-width:800px){.campus-case-cover{min-height:320px}.case-overview{gap:16px}.case-overview dd{font-size:12px}}
+@media(max-width:600px){.campus-case-cover{min-height:310px;padding:42px 25px 28px;gap:16px}.campus-case-cover>strong{font-size:37px;letter-spacing:-1.8px}.campus-cover-line{font-size:15px}.campus-cover-foot{font-size:6px;letter-spacing:1px}.campus-cover-mark{width:62px;height:57px}.case-preview .campus-case-cover{min-height:290px;aspect-ratio:auto;padding:40px 25px 28px}.case-preview .campus-case-cover>strong{font-size:37px}.case-overview{grid-template-columns:1fr;gap:17px;margin-top:24px;padding:20px 0}.case-overview dd{font-size:13px;margin-top:5px}}
+@media(max-width:370px){.entry-featured .campus-case-cover>strong{font-size:32px}.campus-cover-foot{letter-spacing:.5px}}
