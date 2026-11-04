@@ -22,7 +22,6 @@ const projects = {
     "role": "Co-founder & lead designer",
     "time": "2025 — Present",
     "status": "In development",
-    "previewCaption": "Project cover · A preview of the design direction for an ongoing product.",
     "context": "A student housing project shaped by my own search for a place off campus. My work connects the product concept, user experience, interface system, and front-end architecture.",
     "contributions": [
         "Help define the product concept and priorities with my co-founder.",
@@ -112,6 +111,44 @@ const projects = {
             "Build",
             "Carry the design direction into the interface system and development work."
         ]
+    ],
+    "galleryLabel": "From my local CampusCrib build",
+    "gallery": [
+        {
+            "src": "assets/projects/campuscrib-home-desktop.jpg",
+            "label": "Homepage / desktop",
+            "alt": "CampusCrib homepage captured from George’s local development build"
+        },
+        {
+            "src": "assets/projects/campuscrib-browse-desktop.jpg",
+            "label": "Housing search / desktop",
+            "alt": "CampusCrib housing search screen captured from George’s local development build"
+        },
+        {
+            "src": "assets/projects/campuscrib-property-desktop.jpg",
+            "label": "Property page",
+            "alt": "CampusCrib property page captured from George’s local development build"
+        },
+        {
+            "src": "assets/projects/campuscrib-waitlist-desktop.jpg",
+            "label": "Waitlist page",
+            "alt": "CampusCrib pre-launch waitlist design from the local development build"
+        },
+        {
+            "src": "assets/projects/campuscrib-landlord-desktop.jpg",
+            "label": "Landlord sign-up",
+            "alt": "CampusCrib landlord sign-up screen from the local development build"
+        },
+        {
+            "src": "assets/projects/campuscrib-home-mobile.jpg",
+            "label": "Homepage / mobile",
+            "alt": "CampusCrib homepage on a phone-sized screen, captured from the local development build"
+        },
+        {
+            "src": "assets/projects/campuscrib-browse-mobile.jpg",
+            "label": "Housing search / mobile",
+            "alt": "CampusCrib housing search on a phone-sized screen, captured from the local development build"
+        }
     ]
 },
   phcworkhub: {

@@ -20,7 +20,7 @@ Tabs support arrow, Home, and End keys. Project entries support deep links, brow
 
 ## Content and assets
 
-Claims and project contributions come from the four supplied CVs. CampusCrib remains explicitly in development. Its case study draws on George's first-person account and supplied CV. Following his confidentiality request, the seven local captures are retained outside the source repository and web root; the public entry uses an editorial project cover and high-level design story. The Bookshop, Felx, Phcworkhub, and Trevidia galleries use George's supplied design images, copied unchanged. Graphic Design contains the supplied LAGEO posters, Entryza campaign flyer, and Frozen In Time identity. Media mappings and verified project URLs are recorded in `CONTENT_SOURCES.md`.
+Claims and project contributions come from the four supplied CVs. CampusCrib remains explicitly in development. Its case study draws on George's first-person account and supplied CV. Following his clarification, the public preview and seven-image gallery show the original local development captures. The written case study keeps unpublished business rules and operating procedures private. Original backup copies are retained separately. The Bookshop, Felx, Phcworkhub, and Trevidia galleries use George's supplied design images, copied unchanged. Graphic Design contains the supplied LAGEO posters, Entryza campaign flyer, and Frozen In Time identity. Media mappings and verified project URLs are recorded in `CONTENT_SOURCES.md`.
 
 Fonts: DM Sans, IBM Plex Mono, and Caveat from Google Fonts, locally hosted; open font licenses are retained with the font assets. The earlier generated apartment image is no longer used by the site; its prompt remains in `asset-brief.txt` as provenance.
 

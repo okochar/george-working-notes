@@ -22,7 +22,7 @@ The remaining three files are smaller exports of identities already represented 
 
 Main project previews without matching supplied images are retained as illustrative interface studies. The Bookshop and Felx entries use supplied design files and are labelled accordingly. Sample pricing and testimonial content appearing inside a supplied design is not presented as George's verified business impact.
 
-## CampusCrib local screenshots — retained privately
+## CampusCrib local screenshots
 
 Captured on 30 October 2026 from the user's existing Next.js checkout at `C:/Users/baway/Downloads/campuscrib_phase2/campuscrib`, running in development at `http://127.0.0.1:3002`. No CampusCrib screenshot was taken from the online deployment. No fixture interception, fabricated UI, account creation, form submission, or application source change was used.
 
@@ -36,7 +36,7 @@ Captured on 30 October 2026 from the user's existing Next.js checkout at `C:/Use
 | campuscrib-home-mobile.jpg | / | Homepage, mobile |
 | campuscrib-browse-mobile.jpg | /browse | Discovery, mobile |
 
-These captures were previously used in the portfolio. Following George’s confidentiality instruction, they are now retained outside the repository and web root, and are not included in the current deployable files. They document the current local interface, including development data visible in the app. They do not establish property availability, customer outcomes, or a launched marketplace.
+Following George’s clarification on 4 November 2026, these original local captures are shown again in the homepage preview and project gallery. Their backup copies are retained separately. The written case study omits confidential operating details. They document the current local interface, including development data visible in the app. They do not establish property availability, customer outcomes, or a launched marketplace.
 
 ## Additional owner-supplied work, reviewed 1 November 2026
 
@@ -74,4 +74,4 @@ George confirmed that he has no URLs for The Bookshop, Frozen In Time, or Felx. 
 
 The expanded public story is based on George’s own account of a housing search in 2025, his decision to plan the UX before the visual design, and the responsibilities established in his supplied CV. The account is presented as firsthand experience, without invented interviews, usability studies, adoption metrics, or launch outcomes.
 
-The public entry omits unpublished operating procedures, transaction mechanics, commercial rules, and detailed product flows. It also omits identifiable parties and exact figures from the personal account. The local captures and outbound preview link have been removed from the current public-facing source. The cover is explicitly a project cover; it is not presented as a product screenshot. External editorial reading is kept separately from claims about George’s own design process.
+The written case study omits unpublished operating procedures, transaction mechanics, commercial rules, identifiable parties, and exact figures from the personal account. George clarified on 4 November 2026 that the product screenshots should remain visible. The seven original local captures are therefore restored to the homepage preview and interactive gallery, replacing the editorial cover. The outbound product preview link remains withheld. External editorial reading is kept separately from claims about George’s own design process.
