@@ -75,3 +75,20 @@ George confirmed that he has no URLs for The Bookshop, Frozen In Time, or Felx. 
 The expanded public story is based on George’s own account of a housing search in 2025, his decision to plan the UX before the visual design, and the responsibilities established in his supplied CV. The account is presented as firsthand experience, without invented interviews, usability studies, adoption metrics, or launch outcomes.
 
 The written case study omits unpublished operating procedures, transaction mechanics, commercial rules, identifiable parties, and exact figures from the personal account. George clarified on 4 November 2026 that the product screenshots should remain visible. The seven original local captures are therefore restored to the homepage preview and interactive gallery, replacing the editorial cover. The outbound product preview link remains withheld. External editorial reading is kept separately from claims about George’s own design process.
+
+
+## Phcworkhub case study and live captures — 5 November 2026
+
+The expanded narrative is based on George’s first-person account and CV. It describes joining at the start, mapping a broad brief, conditional fields, desktop/tablet/mobile design, parallel development, and implementation review. The smaller-release recommendation is described as not adopted. Document-assisted pre-fill is explicitly labelled as a design proposal that was not implemented as proposed. The uncertain form/screen counts are summarised as “dozens”; an exact 90-screen total, unverified research methods, price superiority, and commercial impact figures are not claimed.
+
+Five current public-product captures were made from https://www.phcworkhub.com/ using the browser on 5 November 2026. These are context images of the current implementation and may include changes made after George’s engagement. His supplied phcworkhub-design.png composition remains the first gallery image and the project-card preview.
+
+| Asset | Public route | Framing |
+|---|---|---|
+| phcworkhub-w2-live.jpg | /w2 | Basic information and document preview, desktop |
+| phcworkhub-paystub-live.jpg | /paystub | Employee information and earnings preview, desktop |
+| phcworkhub-1099-live.jpg | /1099-misc | Form sections and document preview, desktop |
+| phcworkhub-invoice-live.jpg | /invoice | Builder and document preview, desktop |
+| phcworkhub-w2-mobile-live.jpg | /w2 | Phone viewport |
+
+Desktop captures are focused 1184 × 540 crops from a 1280 × 720 viewport; the phone capture uses a 390 × 844 viewport. All five were opened and visually checked. The W-2 year was set to 2026; remaining fields were left empty or at the site’s default sample values. No personal information, account sign-in, form submission, payment connection, purchase, trial activation, or terms acceptance was used. The top navigation in the portfolio was preserved byte-for-byte.

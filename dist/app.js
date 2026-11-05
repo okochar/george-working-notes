@@ -152,16 +152,180 @@ const projects = {
     ]
 },
   phcworkhub: {
-    gallery: [{src:'assets/projects/phcworkhub-design.png',label:'Website design',alt:'Original Phcworkhub website composition showing the homepage, document templates, and supporting sections'}],
-    number: '002', title: 'Phcworkhub', subtitle: 'A clearer path through complex paperwork.', category: 'Tax automation / Business documents', role: 'Lead UI/UX designer & product tester', time: 'Design: Aug 2024 — Feb 2025 · Testing: 2024 — Apr 2025', status: 'Design & interface review',
-    links: [{label:'Visit product website',url:'https://www.phcworkhub.com/'}],
-    context: 'The platform covered tax automation, business documents, and estate paperwork. My design work organised complex requirements into onboarding, multi-step forms, document generation, and dashboard navigation.',
-    contributions: ['Work with stakeholders to define scope, timelines, and deliverables.', 'Structure complex requirements into manageable form sections and user journeys.', 'Create reusable patterns for signatures, uploads, validation states, and responsive layouts.', 'Collaborate with front-end developers on implementation and technical constraints.', 'Test deployed interfaces against user requirements and communicate actionable usability feedback.'],
-    focus: 'The form is a journey',
-    note: 'Forms have many small states: a required field, an upload, a signature, a validation message. Reusable patterns help keep those moments understandable across different document types.',
-    details: 'The design and testing roles offered two views of the product: the intended experience and the deployed interface. My contributions included identifying inconsistencies and providing feedback for revision.',
-    workflow: [['Onboard', 'Organise onboarding so people can find the document workflow they need.'], ['Complete', 'Use structured form sections, signature fields, uploads, and validation states.'], ['Generate', 'Connect form submission to document generation and dashboard navigation.'], ['Review', 'Check the deployed interface against requirements and communicate issues clearly.']]
-  },
+    "number": "002",
+    "title": "Phcworkhub",
+    "subtitle": "Turning complex document rules into usable workflows.",
+    "category": "Tax & business documents / Workflow design",
+    "role": "Lead UI/UX designer & product tester",
+    "time": "Design: Aug 2024 — Feb 2025 · Testing: 2024 — Apr 2025",
+    "status": "Product now live",
+    "links": [
+        {
+            "label": "Visit product website",
+            "url": "https://www.phcworkhub.com/"
+        }
+    ],
+    "galleryLabel": "My design board / Current product views",
+    "galleryAria": "Phcworkhub original design and current public product screenshots",
+    "galleryNote": "The design board is from my original files. The five live captures show the current public product, which may include later changes. They provide context for the document workflows discussed below.",
+    "gallery": [
+        {
+            "src": "assets/projects/phcworkhub-design.png",
+            "label": "My original website design",
+            "alt": "George’s original Phcworkhub website design composition with document templates and supporting sections"
+        },
+        {
+            "src": "assets/projects/phcworkhub-w2-live.jpg",
+            "label": "W-2 form & preview / live",
+            "alt": "Current Phcworkhub W-2 interface showing the tax-year field, form sections, and a watermarked document preview"
+        },
+        {
+            "src": "assets/projects/phcworkhub-paystub-live.jpg",
+            "label": "Paystub form & preview / live",
+            "alt": "Current Phcworkhub paystub interface with employee-information fields beside a sample earnings-statement preview"
+        },
+        {
+            "src": "assets/projects/phcworkhub-1099-live.jpg",
+            "label": "1099 form & preview / live",
+            "alt": "Current Phcworkhub 1099-MISC interface with grouped information fields and a watermarked document preview"
+        },
+        {
+            "src": "assets/projects/phcworkhub-invoice-live.jpg",
+            "label": "Invoice builder / live",
+            "alt": "Current Phcworkhub invoice builder showing grouped business details and a watermarked invoice preview"
+        },
+        {
+            "src": "assets/projects/phcworkhub-w2-mobile-live.jpg",
+            "label": "W-2 form / phone view",
+            "alt": "Current Phcworkhub W-2 interface at phone width with vertically arranged form sections and tax-year selection"
+        }
+    ],
+    "overview": [
+        [
+            "Starting point",
+            "An early product with a broad brief"
+        ],
+        [
+            "Design scope",
+            "Dozens of screens across 3 sizes"
+        ],
+        [
+            "Core challenge",
+            "Conditional form logic & previews"
+        ]
+    ],
+    "context": "I joined near the beginning of Phcworkhub as the first designer brought into the project. The brief was to bring a broad range of tax and business documents into one product. My work covered the user flows, form logic, document interfaces, responsive layouts, and implementation review.",
+    "contributions": [
+        "Translate a broad brief into user flows and document interfaces.",
+        "Design and document fields that change with the selected year or previous answers.",
+        "Create document screens and previews for desktop, tablet, and mobile.",
+        "Recommend a smaller initial release and explore document-assisted pre-fill.",
+        "Work alongside development and review deployed interfaces against requirements."
+    ],
+    "focus": "The logic behind the fields.",
+    "note": "A year selector could change which information a person needed to provide. I had to work through those dependencies and document them alongside the screens so the intended behaviour was clear.",
+    "extraNote": "My design work included ideas that were not implemented. The case study distinguishes those explorations from the work that reached development.",
+    "details": "The account below describes my own responsibilities and decisions. The product launched after my design engagement. Current screenshots show the live implementation, including possible later revisions; they do not imply that every visible feature was my work.",
+    "sections": [
+        {
+            "title": "Starting with an ambitious brief",
+            "paragraphs": [
+                "I joined Phcworkhub near the beginning of the project, before the design team expanded. There was no established product experience to refine. The work began with a broad brief: bring a range of tax and business documents into one platform and make them easier to prepare.",
+                "The ambition included supporting repeat use, so people would spend less time entering information they had already provided. Affordability was also part of the product direction. My challenge was to turn that ambition into a coherent experience across document types with very different information requirements."
+            ]
+        },
+        {
+            "title": "Defining the journey before the screens",
+            "paragraphs": [
+                "My first important decision was to map the user flow. The brief covered a large amount of work, and I needed a structure for how a person would find a document, provide the relevant information, and understand the resulting preview.",
+                "This gave me a way to organise the work before moving into individual screens. Each document needed its own detail, but the wider experience still had to feel like one product. The design challenge was to keep the journey understandable while accommodating the differences between forms."
+            ]
+        },
+        {
+            "title": "Making conditional fields understandable",
+            "paragraphs": [
+                "The difficult part was often the behaviour behind a field. A person’s selection could change the information they needed to provide next. For example, choosing a different year could require one group of fields to disappear and another to become available.",
+                "I worked through that logic as part of the interface design and documented the dependencies. The screens needed to communicate the relevant questions in the right context, while the design documentation explained the conditions behind them.",
+                "This made the work more involved than producing a static form layout. I had to consider the relationship between earlier choices, later fields, and the document the person was preparing. That reasoning was a significant part of my contribution."
+            ],
+            "figure": {
+                "src": "assets/projects/phcworkhub-w2-live.jpg",
+                "alt": "W-2 form fields and the document preview in the current live product",
+                "caption": "Current product reference: grouped W-2 information alongside the document preview."
+            }
+        },
+        {
+            "title": "Recommending a smaller first release",
+            "paragraphs": [
+                "The initial scope was substantial. I recommended starting with a smaller set of documents, releasing that version, learning whether it met people’s needs, and expanding the catalogue over time.",
+                "My reasoning was that an earlier release could give the team useful feedback before committing to the full breadth of the product. That recommendation was not adopted as the delivery approach. The scope remained broad, with development progressing alongside design and work being reviewed in preview builds.",
+                "I continued designing within that direction. The experience taught me to distinguish a recommendation I could make from a delivery decision I could control, and to keep the design work moving within the agreed scope."
+            ]
+        },
+        {
+            "title": "Exploring document-assisted pre-fill",
+            "label": "Design proposal / Not implemented",
+            "paragraphs": [
+                "One idea I designed and proposed was using an existing document to help prepare a new one. A person could supply a photo or a digital copy of a previous document, and relevant information could be carried into the new form for review and correction.",
+                "The intent was to reduce repeated data entry. It also created an important UX requirement: people would need to understand what had been carried over and have a clear opportunity to correct it.",
+                "This remained a design proposal. It was not built in the way I suggested, so I present it here as an exploration and the reasoning behind it, rather than as a shipped capability."
+            ]
+        },
+        {
+            "title": "Designing across three screen sizes",
+            "paragraphs": [
+                "I designed dozens of document screens and previews, adapting the work for desktop, tablet, and mobile. Each document brought its own questions and dependencies, while each screen size changed the space available to present them.",
+                "I had to carry the same underlying form logic across those layouts. The responsibility was to keep the task coherent as the arrangement changed, so responsive design remained connected to the workflow rather than becoming a separate visual exercise."
+            ],
+            "figure": {
+                "src": "assets/projects/phcworkhub-w2-mobile-live.jpg",
+                "portrait": true,
+                "alt": "The current W-2 form arranged vertically on a phone-sized screen",
+                "caption": "Current product reference: the W-2 form at phone width. My original design scope covered desktop, tablet, and mobile."
+            }
+        },
+        {
+            "title": "Working through delivery and review",
+            "paragraphs": [
+                "Design and development happened in parallel. As I completed interfaces, developers worked on implementing them, while stakeholder feedback continued to shape revisions. I needed to keep the requirements, screen states, and intended behaviour understandable as the work changed.",
+                "Alongside the design work, I reviewed deployed interfaces against requirements and communicated inconsistencies and usability feedback. That gave me a second perspective on the product: how the intended experience translated into working screens.",
+                "The design delivery was completed before development finished. It was a demanding project because the work combined a broad catalogue, conditional behaviour, responsive layouts, and continuing review. It strengthened my ability to reason through complexity and communicate the details needed for implementation."
+            ]
+        },
+        {
+            "title": "What reached the product",
+            "paragraphs": [
+                "A substantial part of the interface work progressed into development, and Phcworkhub subsequently launched. The current public product includes document builders and previews for tax, payroll, and business paperwork.",
+                "The result I can speak to directly is the design work delivered: document interfaces, their preview designs, responsive versions, and the logic documented around them. The screenshots in this entry show the current product for context; it has continued to evolve after my engagement."
+            ]
+        },
+        {
+            "title": "What I took from the project",
+            "paragraphs": [
+                "Phcworkhub made the reasoning behind an interface a central part of my work. A field can look straightforward while depending on a choice made much earlier in the journey. Designing that experience required me to think about the relationships between screens and states, and to make those relationships explicit.",
+                "It also gave me experience working within delivery constraints. Some recommendations were adopted into the work and others remained proposals. I learned to explain the reasoning, document the behaviour, and keep contributing to an implementation that could move forward."
+            ]
+        }
+    ],
+    "workflow": [
+        [
+            "Map",
+            "Organise the journey and the information needed for each document."
+        ],
+        [
+            "Define",
+            "Work through conditional fields and document the intended behaviour."
+        ],
+        [
+            "Adapt",
+            "Carry the workflow across desktop, tablet, and mobile layouts."
+        ],
+        [
+            "Review",
+            "Compare deployed interfaces with requirements and communicate useful feedback."
+        ]
+    ]
+},
   trevidia: {
     gallery: [{src:'assets/projects/trevidia-design.png',label:'Website & pricing design',alt:'Original Trevidia website composition showing the invoicing homepage and pricing section'}],
     number: '003', title: 'Trevidia', subtitle: 'Making invoicing feel organised.', category: 'B2B SaaS / Invoicing & collaboration', role: 'Junior designer', time: 'Apr 2025 — Jul 2025', status: 'Product design',
@@ -292,7 +456,7 @@ document.querySelectorAll('.entry').forEach(entry => {
 
 function galleryFor(project) {
   const first = project.gallery[0];
-  return `<section class="original-gallery" aria-label="Original ${escapeHtml(project.title)} design images"><div class="gallery-toolbar"><span class="micro">${escapeHtml(project.galleryLabel || "From my design files")}</span><div class="gallery-arrows"><button type="button" data-gallery-move="-1" aria-label="Previous design image">←</button><span class="micro" id="gallery-count">1 / ${project.gallery.length}</span><button type="button" data-gallery-move="1" aria-label="Next design image">→</button></div></div><div class="gallery-thumbs" role="group" aria-label="Choose a design image">${project.gallery.map((asset,index) => `<button type="button" data-gallery-index="${index}" aria-pressed="${index === 0}"><img src="${asset.src}" alt="" loading="lazy"><span>${escapeHtml(asset.label)}</span></button>`).join('')}</div><figure class="gallery-figure" id="gallery-figure"><img id="gallery-image" src="${first.src}" alt="${escapeHtml(first.alt)}"><figcaption><span id="gallery-caption" aria-live="polite">${escapeHtml(first.label)}</span><a class="text-link" id="gallery-original" href="${first.src}" target="_blank" rel="noopener">Open full-size image ↗</a></figcaption></figure></section>`;
+  return `<section class="original-gallery" aria-label="${escapeHtml(project.galleryAria || `Original ${project.title} design images`)}"><div class="gallery-toolbar"><span class="micro">${escapeHtml(project.galleryLabel || "From my design files")}</span><div class="gallery-arrows"><button type="button" data-gallery-move="-1" aria-label="Previous design image">←</button><span class="micro" id="gallery-count">1 / ${project.gallery.length}</span><button type="button" data-gallery-move="1" aria-label="Next design image">→</button></div></div>${project.galleryNote ? `<p class="gallery-context">${escapeHtml(project.galleryNote)}</p>` : ''}<div class="gallery-thumbs" role="group" aria-label="Choose a design image">${project.gallery.map((asset,index) => `<button type="button" data-gallery-index="${index}" aria-pressed="${index === 0}"><img src="${asset.src}" alt="" loading="lazy"><span>${escapeHtml(asset.label)}</span></button>`).join('')}</div><figure class="gallery-figure" id="gallery-figure"><img id="gallery-image" src="${first.src}" alt="${escapeHtml(first.alt)}"><figcaption><span id="gallery-caption" aria-live="polite">${escapeHtml(first.label)}</span><a class="text-link" id="gallery-original" href="${first.src}" target="_blank" rel="noopener">Open full-size image ↗</a></figcaption></figure></section>`;
 }
 
 function selectGalleryImage(index) {
@@ -313,9 +477,11 @@ function selectGalleryImage(index) {
 function caseBodyFor(project) {
   if (project.sections?.length) {
     return project.sections.map(section => `<section class="case-section">
+      ${section.label ? `<p class="micro case-section-label">${escapeHtml(section.label)}</p>` : ''}
       <h3>${escapeHtml(section.title)}</h3>
       ${(section.paragraphs || []).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join('')}
       ${section.points?.length ? `<ul>${section.points.map(point => `<li>${escapeHtml(point)}</li>`).join('')}</ul>` : ''}
+      ${section.figure ? `<figure class="case-story-figure${section.figure.portrait ? ' is-portrait' : ''}"><img src="${escapeHtml(section.figure.src)}" alt="${escapeHtml(section.figure.alt)}" loading="lazy"><figcaption>${escapeHtml(section.figure.caption)}</figcaption></figure>` : ''}
     </section>`).join('');
   }
   return `<section class="case-section"><h3>The context</h3><p>${project.context}</p></section><section class="case-section"><h3>What I contributed</h3><ul>${project.contributions.map(point => `<li>${point}</li>`).join('')}</ul></section><section class="case-section"><h3>A note on the scope</h3><p>${project.details}</p></section>`;

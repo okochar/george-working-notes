@@ -24,6 +24,8 @@ Claims and project contributions come from the four supplied CVs. CampusCrib rem
 
 Fonts: DM Sans, IBM Plex Mono, and Caveat from Google Fonts, locally hosted; open font licenses are retained with the font assets. The earlier generated apartment image is no longer used by the site; its prompt remains in `asset-brief.txt` as provenance.
 
+Phcworkhub now includes a detailed first-person case study, the original design board, and five focused captures of the current public product. Selected images also appear beside the relevant story sections. The document-assisted pre-fill concept is explicitly marked as an unimplemented design proposal. Current product captures are distinguished from George's original design files.
+
 ## Deploy
 
 Import this repository into Vercel with the Other framework preset. The root configuration publishes `dist/` without dependency installation or a build step. Pushes to the connected production branch deploy the updated portfolio. No environment variables are required.
